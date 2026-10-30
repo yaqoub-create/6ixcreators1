@@ -1,0 +1,226 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+#sx6{
+  --bg:#EDE6FB; --surface:#FFFFFF; --ink:#2A1240; --muted:#5E4A78; --accent:#FF4F8B; --accent-ink:#FFFFFF; --mint:#BDEFD6; --line:#CFC2EA;
+  box-sizing:border-box; 
+}
+#sx6 *,#sx6 *::before,#sx6 *::after{box-sizing:border-box}
+#sx6{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 "DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+#sx6 h1,#sx6 h2,#sx6 h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.02;margin:0;letter-spacing:-.02em}
+#sx6 a{color:inherit}
+#sx6 :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+#sx6 .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+#sx6 nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+#sx6 .logo{font:800 22px "Bricolage Grotesque",sans-serif;text-decoration:none}
+#sx6 .logo span{color:var(--accent)}
+#sx6 .btn{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:700;padding:13px 22px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;font-size:16px}
+#sx6 .btn.alt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+#sx6 .hero{padding:34px 0 70px}
+#sx6 .big{font-size:clamp(120px,30vw,330px);font-weight:800;line-height:.8;color:var(--accent);margin-left:-.04em}
+#sx6 .hero h1{font-size:clamp(34px,6vw,64px);max-width:15ch;margin-top:18px}
+#sx6 .hero p{max-width:52ch;color:var(--muted);font-size:19px;margin:18px 0 26px}
+#sx6 .row{display:flex;gap:12px;flex-wrap:wrap}
+#sx6 section{padding:64px 0;border-top:2px solid var(--line)}
+#sx6 h2{font-size:clamp(30px,4.6vw,48px);margin-bottom:14px}
+#sx6 .two{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:26px}
+#sx6 .panel{background:var(--surface);border-radius:26px 26px 26px 6px;padding:28px}
+#sx6 .panel:nth-child(2){border-radius:26px 26px 6px 26px;background:var(--mint);color:#2A1240}
+#sx6 .panel h3{font-size:26px;margin-bottom:10px}
+#sx6 .panel ul{padding-left:20px;margin:12px 0 0}
+#sx6 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:26px;counter-reset:s;padding:0;list-style:none}
+#sx6 .steps li{counter-increment:s;border-top:4px solid var(--accent);padding-top:12px}
+#sx6 .steps li::before{content:counter(s);font:800 34px "Bricolage Grotesque",sans-serif;display:block;color:var(--accent)}
+#sx6 .steps b{display:block;font-size:18px}
+#sx6 .chips{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+#sx6 .chip{border:2px solid var(--ink);background:transparent;color:var(--ink);padding:7px 16px;border-radius:999px;font:500 15px "DM Sans",sans-serif;cursor:pointer}
+#sx6 .chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+#sx6 .board{display:grid;gap:12px}
+#sx6 .deal{display:grid;grid-template-columns:1.4fr 1fr 1fr auto;gap:14px;align-items:center;background:var(--surface);border-radius:18px;padding:16px 20px}
+#sx6 .deal b{font-size:18px}
+#sx6 .deal small{color:var(--muted);display:block}
+#sx6 .tag{background:var(--mint);color:#2A1240;border-radius:999px;padding:3px 12px;font-size:14px;font-weight:700;justify-self:start}
+#sx6 .note{color:var(--muted);font-size:15px;margin-top:14px}
+#sx6 .cta{background:var(--ink);color:var(--bg);border-radius:32px;padding:44px 30px;margin:20px 0 60px}
+#sx6 .cta h2{max-width:16ch}
+#sx6 .cta .btn.alt{color:var(--bg);box-shadow:inset 0 0 0 2px var(--bg)}
+#sx6 footer{padding:0 0 40px;color:var(--muted);font-size:15px}
+#sx6 .form{display:grid;gap:14px;max-width:620px;margin-top:24px}
+#sx6 .form label{display:grid;gap:6px;font-weight:700;font-size:15px}
+#sx6 .form input,#sx6 .form select,#sx6 .form textarea{font:400 16px "DM Sans",sans-serif;padding:12px 14px;border-radius:12px;border:2px solid var(--line);background:var(--surface);color:var(--ink);width:100%}
+#sx6 .form button{justify-self:start}
+#sx6 .sent{background:var(--mint);color:#2A1240;border-radius:18px;padding:18px;margin-top:20px;max-width:620px}
+#sx6 .sent textarea{width:100%;min-height:150px;margin:10px 0;border-radius:10px;border:0;padding:10px;font:14px/1.4 monospace;color:#2A1240;background:#fff}
+@media (max-width:760px){#sx6 .two,#sx6 .steps{grid-template-columns:1fr}
+#sx6 .deal{grid-template-columns:1fr 1fr}
+#sx6 .deal .btn{grid-column:1/-1;text-align:center}}
+#sx6 .formwrap{max-width:700px;margin-top:24px}
+#sx6 .formframe{display:block;width:100%;border:0;border-radius:18px;background:#fff}
+
+
+#sx6{background:var(--bg);color:var(--ink);font:400 17px/1.55 "DM Sans",system-ui,sans-serif;padding-bottom:20px}
+#sx6 *{box-sizing:border-box}
+#sx6 .cta h2,#sx6 .cta p{color:var(--bg)!important}
+#sx6 .contact{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;margin:20px 0 60px}
+#sx6 .contact .left{background:var(--surface);border-radius:26px 26px 26px 6px;padding:30px}
+#sx6 .contact .right{background:var(--ink);border-radius:26px 26px 6px 26px;padding:30px;display:flex;flex-direction:column;justify-content:center}
+#sx6 .contact h2,#sx6 .contact .left p{color:var(--ink)!important}
+#sx6 .contact .left p{color:var(--muted)!important;max-width:46ch}
+#sx6 .contact .right h3,#sx6 .contact .right p,#sx6 .contact .right a{color:var(--bg)!important}
+#sx6 .contact .right h3{font-size:26px;margin-bottom:10px}
+#sx6 .contact .bigmail{font:800 clamp(20px,3vw,28px)/1.1 "Bricolage Grotesque",sans-serif;word-break:break-all;text-decoration:none;margin-bottom:12px}
+#sx6 .cform{display:grid;gap:14px;margin-top:20px}
+#sx6 .cform label{display:grid;gap:6px;font-weight:700;font-size:15px;color:var(--ink)}
+#sx6 .cform input,#sx6 .cform textarea{font:400 16px "DM Sans",sans-serif;padding:12px 14px;border-radius:12px;border:2px solid var(--line);background:#fff;color:var(--ink);width:100%}
+#sx6 .cform .btn{justify-self:start;color:#fff!important}
+@media (max-width:760px){#sx6 .contact{grid-template-columns:1fr}}
+</style>
+<div id="sx6">
+<div class="wrap">
+  <nav>
+    <a class="logo" href="#top">6ix<span>Creators</span></a>
+    <a class="btn" href="#contact">Get started</a>
+  </nav>
+
+<div id="view-home">
+  <header class="hero" id="top">
+    <div class="big" aria-hidden="true">6ix</div>
+    <h1>Brand deals for Toronto’s creators.</h1>
+    <p>We connect beauty and lifestyle brands with creators who fit, then handle the pitch, the terms, and the follow-through.</p>
+    <div class="row">
+      <a class="btn" href="#brand">I’m a brand</a>
+      <a class="btn alt" href="#creator">I’m a creator</a>
+    </div>
+  </header>
+
+  <section id="who">
+    <h2>Two sides, one deal.</h2>
+    <div class="two">
+      <div class="panel">
+        <h3>For creators</h3>
+        <p>Get matched with paid promotions that suit your audience, without sending cold DMs.</p>
+        <ul><li>Brand offers sent to you directly</li><li>Clear deliverables and payment terms up front</li><li>We negotiate so you can create</li></ul>
+      </div>
+      <div class="panel">
+        <h3>For brands</h3>
+        <p>Post a campaign and get the right creators in front of your product.</p>
+        <ul><li>Creators picked by niche and audience</li><li>One point of contact from brief to post</li><li>Simple pricing, agreed before work starts</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <h2>How a deal works</h2>
+    <ol class="steps">
+      <li><b>Brief</b>A brand shares the product, budget, and goals.</li>
+      <li><b>Match</b>We shortlist creators whose audience fits.</li>
+      <li><b>Agree</b>Deliverables, dates, and pay are confirmed in writing.</li>
+      <li><b>Post</b>The creator publishes and we collect results.</li>
+    </ol>
+  </section>
+
+  <section id="board">
+    <h2>Open campaigns</h2>
+    <p style="color:var(--muted);max-width:56ch;margin:0">This is how campaigns will look to creators. Listings below are samples.</p>
+    <div class="chips" role="group" aria-label="Filter campaigns">
+      <button class="chip" data-f="all" aria-pressed="true">All</button>
+      <button class="chip" data-f="Makeup" aria-pressed="false">Makeup</button>
+      <button class="chip" data-f="Skincare" aria-pressed="false">Skincare</button>
+      <button class="chip" data-f="Hair" aria-pressed="false">Hair</button>
+    </div>
+    <div class="board" id="board-list"></div>
+    <p class="note">Sample listings only. Brands and budgets are placeholders.</p>
+  </section>
+
+  <div class="contact" id="contact">
+    <div class="left">
+      <h2>Contact us</h2>
+      <p>Questions about a campaign or joining as a creator? Send us a message and we’ll reply within two business days.</p>
+      <form class="cform" id="cform" onsubmit="return false">
+        <label>Name<input name="Name" required></label>
+        <label>Email<input name="Email" type="email" required></label>
+        <label>Message<textarea name="Message" rows="4" required></textarea></label>
+        <button class="btn" type="button" id="csend">Send message</button>
+      </form>
+    </div>
+    <div class="right">
+      <h3>Email</h3>
+      <a class="bigmail" href="mailto:info@6ixcreators.com">info@6ixcreators.com</a>
+      <p>Prefer to write us directly? Email anytime.</p>
+    </div>
+  </div>
+
+</div>
+
+<div id="view-brand" hidden>
+  <section style="border-top:0">
+    <a href="#">← Back to home</a>
+    <h2 style="margin-top:18px;font-size:clamp(34px,6vw,60px)">Post a campaign</h2>
+    <p style="color:var(--muted);max-width:52ch">Tell us about your product and budget. We’ll reply with a shortlist of creators who fit.</p>
+    <div class="formwrap"><div class="panel"><h3>Tell us about your campaign</h3><p>The form opens in a new tab and takes about two minutes. We reply to every submission by email.</p><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfksPbXwr7Ylq4XpdduqL6GVNxDA5TG2QavchKi0VXFhc0_FQ/viewform" target="_blank" rel="noopener">Open the brand form</a></div></div>
+  </section>
+</div>
+
+<div id="view-creator" hidden>
+  <section style="border-top:0">
+    <a href="#">← Back to home</a>
+    <h2 style="margin-top:18px;font-size:clamp(34px,6vw,60px)">Join as a creator</h2>
+    <p style="color:var(--muted);max-width:52ch">Share your profile and we’ll send you brand deals that suit your audience.</p>
+    <div class="formwrap"><div class="panel"><h3>Apply to join</h3><p>The form opens in a new tab and takes about two minutes. We reply to every submission by email.</p><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeB9Kj8tEIno3ZsGWqvTtseB6v-m9kE-GWS5PjL9HzUqvEYNg/viewform" target="_blank" rel="noopener">Open the creator form</a></div></div>
+  </section>
+</div>
+
+  <footer>© 2026 6ix Creators · Brampton, Ontario · yuvraj@6ixcreators.com</footer>
+</div>
+
+</div>
+<script>
+(function(){
+
+var deals=[
+  {b:"Sample Lip Co.",n:"Makeup",d:"1 Reel + 3 Stories",p:"$300–$500"},
+  {b:"Sample Glow Lab",n:"Skincare",d:"2 TikToks",p:"$400–$700"},
+  {b:"Sample Curl House",n:"Hair",d:"1 Reel + product gifting",p:"$250–$400"},
+  {b:"Sample Lash Studio",n:"Makeup",d:"3 Stories + 1 post",p:"$200–$350"},
+  {b:"Sample Dew Skin",n:"Skincare",d:"1 YouTube Short",p:"$300–$450"}
+];
+var list=document.getElementById("board-list");
+function render(f){
+  list.innerHTML="";
+  deals.filter(function(x){return f==="all"||x.n===f}).forEach(function(x){
+    var e=document.createElement("div");e.className="deal";
+    e.innerHTML="<div><b>"+x.b+"</b><small>"+x.d+"</small></div><span class=\"tag\">"+x.n+"</span><div><b>"+x.p+"</b><small>Budget</small></div><a class=\"btn\" href=\"#creator\">Apply</a>";
+    list.appendChild(e);
+  });
+}
+document.querySelectorAll(".chip").forEach(function(c){
+  c.addEventListener("click",function(){
+    document.querySelectorAll(".chip").forEach(function(o){o.setAttribute("aria-pressed","false")});
+    c.setAttribute("aria-pressed","true");render(c.dataset.f);
+  });
+});
+render("all");
+
+var MAIL="yuvraj@6ixcreators.com";
+function route(){
+  var h=location.hash.slice(1);
+  var v=(h==="brand"||h==="creator")?h:"home";
+  ["home","brand","creator"].forEach(function(n){document.getElementById("view-"+n).hidden=(n!==v)});
+  if(v!=="home"){window.scrollTo(0,0);return}
+  var t=h&&document.getElementById(h);
+  if(t){t.scrollIntoView()}else{window.scrollTo(0,0)}
+}
+window.addEventListener("hashchange",route);
+route();
+
+
+
+document.getElementById("csend").addEventListener("click",function(){
+  var f=document.getElementById("cform");
+  if(!f.reportValidity())return;
+  var d=new FormData(f);
+  var body="Name: "+d.get("Name")+"\nEmail: "+d.get("Email")+"\n\n"+d.get("Message");
+  window.location.href="mailto:info@6ixcreators.com?subject="+encodeURIComponent("6ix Creators inquiry")+"&body="+encodeURIComponent(body);
+});
+})();
+</script>
